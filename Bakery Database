@@ -1,0 +1,27 @@
+Create a bakery database
+
+CREATE TABLE bakery (id INTEGER PRIMARY KEY, name TEXT, type TEXT, quantity INTEGER, price INTEGER);
+INSERT INTO bakery
+VALUES
+(1, "key lime slice", "pie", 1, 5), 
+(2, "chocolate chip", "cookie", 3, 10),
+(3, "choclate slice", "cake", 1, 6),
+(4, "snickerdoodle", "cookie", 3, 10),
+(5, "oatmeal", "cookie", 3, 10),
+(6, "chocolate cake", "cake", 8, 40),
+(7, "red velvet slice", "cake", 1, 6),
+(8, "pumpkin slice", "pie", 1, 5),
+(9, "apple slice", "pie", 1, 5),
+(10, "cheesecake", "pie", 1, 5),
+(11, "chocolate covered strawberries", "dessert", 5, 15),
+(12, "cupcake", "cake", 1, 4),
+(13, "carrot slice", "cake", 1, 6),
+(14, "whoopie pie", "dessert", 1, 3),
+(15, "cake pop", "dessert", 1, 2);
+
+--display the database ordered by price
+
+SELECT * FROM bakery ORDER BY price;
+
+--display the number of each type of product you can purchase ordered by least variety to most
+SELECT type, COUNT(type) FROM bakery GROUP BY type ORDER BY COUNT(type)
