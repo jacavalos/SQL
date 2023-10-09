@@ -33,6 +33,14 @@ INSERT INTO cast VALUES (1, 1, 1, 2),
 (7, 7, 4, 6),
 (8, 8, 8, "NULL");
 
+CREATE TABLE married (id INTEGER PRIMARY KEY, spouse_1 integer, spouse_2 integer);
+
+INSERT INTO married VALUES (1, 1, 2),
+(2, 4, 5),
+(3, 7, 8);
+
+# Analysis 
+
 SELECT * FROM cast;
 
 -- Tell me which actors starred in each movie.
@@ -44,13 +52,6 @@ LEFT JOIN actors a
 ON c.actor_1 = a.id
 LEFT JOIN actors b
 ON c.actor_2 = b.id;
-
-
-CREATE TABLE married (id INTEGER PRIMARY KEY, spouse_1 integer, spouse_2 integer);
-
-INSERT INTO married VALUES (1, 1, 2),
-(2, 4, 5),
-(3, 7, 8);
 
 -- Tell me which actors are married to each other.
 
