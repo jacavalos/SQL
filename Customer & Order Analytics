@@ -72,7 +72,7 @@ SELECT location, COUNT(orderID) AS total_orders
 FROM BIT_DB.JanSales
 WHERE location like '%NY%'
 AND length(orderID) = 6
-AND orderID <> "Order ID"
+AND orderID <> 'Order ID'
 GROUP BY location
 HAVING COUNT(orderID) > 2;
 
