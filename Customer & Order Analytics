@@ -105,4 +105,8 @@ AND orderid <> 'Order ID';
 
 #13 Which product brought in the most revenue in January and how much revenue did it bring in total?
 
-
+SELECT Product, SUM(Quantity * price) AS Total_Rev
+FROM BIT_DB.JanSales
+GROUP BY Product
+ORDER BY Total_Rev desc
+LIMIT 1;
