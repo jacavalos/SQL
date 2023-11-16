@@ -24,4 +24,5 @@ VALUES
 SELECT * FROM bakery ORDER BY price;
 
 --display the number of each type of product you can purchase ordered by least variety to most
+
 SELECT type, COUNT(type) FROM bakery GROUP BY type ORDER BY COUNT(type)
