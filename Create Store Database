@@ -1,0 +1,40 @@
+Create your own store:
+
+CREATE TABLE bakery (id INTEGER PRIMARY KEY, name TEXT, type TEXT, price INTEGER, quantity INTEGER);
+
+INSERT INTO bakery values (1, "chocolate chip", "cookie", 2, 48);
+
+INSERT INTO bakery VALUES (2, "sugar", "cookie", 2, 36);
+
+INSERT INTO bakery VALUES (3, "blueberry", "muffin", 4, 12);
+
+INSERT INTO bakery VALUES (4, "coffee cake", "muffin", 4, 6);
+
+INSERT INTO bakery VALUES (5, "chocolate chip", "muffin", 4, 6);
+
+INSERT INTO bakery VALUES (6, "double chocolate", "muffin", 4, 6);
+
+INSERT INTO bakery VALUES (7, "oatmeal raisin", "cookie", 2, 24);
+
+INSERT INTO bakery VALUES (8, "peanut butter", "cookie", 2, 24);
+
+INSERT INTO bakery VALUES (9, "vanilla", "cupcake", 4, 6);
+
+INSERT INTO bakery VALUES (10, "chocolate", "cupcake", 4, 6);
+
+INSERT INTO bakery VALUES (11, "cookies n cream", "cupcake", 4, 6);
+
+INSERT INTO bakery VALUES (12, "carrot cake", "cupcake", 4, 6);
+
+INSERT INTO bakery VALUES (13, "german chocolate", "cupcake", 4, 6);
+
+INSERT INTO bakery VALUES (14, "red velvet", "cupcake", 4, 6);
+
+INSERT INTO bakery VALUES (15, "monster", "cookie", 2, 48);
+
+Order your items by price:
+SELECT * FROM bakery 
+ORDER BY price;
+
+Show at least one statistic about the items:
+SELECT type, SUM(quantity) FROM bakery GROUP BY type;
